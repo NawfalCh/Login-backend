@@ -20,6 +20,10 @@ app.use(bodyParser.json()); // Erlaubt JSON im Body
 // ---------------------------------------------------------
 // API 1: Email & Passwort empfangen -> User erstellen
 // ---------------------------------------------------------
+app.get('/', (req, res) => {
+  res.send('Hello from my App!');
+})
+
 app.post('/api/register-step1', async (req, res) => {
   const { email, password } = req.body;
 
